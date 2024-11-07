@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в систему - Linkadoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container auth-container">
+
+
+    <div class="theme-toggle-container" style="position: absolute; top: 20px; right: 20px;">
+        <label class="theme-toggle-label">
+            <input type="checkbox" id="themeToggle" onchange="toggleTheme()" aria-label="Переключить тему">
+            <span class="theme-toggle-slider"></span>
+        </label>
+        <span id="themeIcon">☀️</span>
+    </div>
+    <form id="loginForm">
+        <h2 class="logo">Linkadoo</h2>
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Войти">
+    </form>
+    <p>Нет аккаунта? <a href="/register.html">Зарегистрироваться</a></p>
+
+</div>
+<script src="js/login.js"></script>
+</body>
+</html>

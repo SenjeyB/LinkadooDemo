@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация - Linkadoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container auth-container">
+    <div class="theme-toggle-container" style="position: absolute; top: 20px; right: 20px;">
+        <label class="theme-toggle-label">
+            <input type="checkbox" id="themeToggle" onchange="toggleTheme()" aria-label="Переключить тему">
+            <span class="theme-toggle-slider"></span>
+        </label>
+        <span id="themeIcon">☀️</span>
+    </div>
+
+    <form id="registerForm">
+        <h2 class="logo">Linkadoo</h2>
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="nickname">Никнейм:</label>
+        <input type="text" id="nickname" name="nickname" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Подтвердите пароль:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    <p>Уже есть аккаунт? <a href="/login.html">Войти</a></p>
+</div>
+
+<script src="js/register.js"></script>
+</body>
+</html>
