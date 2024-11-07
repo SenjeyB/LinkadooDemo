@@ -1,0 +1,9 @@
+org.poltanov.forums
+org.poltanov.forums.config
+org.poltanov.forums.controller
+org.poltanov.forums.dto
+org.poltanov.forums.exception
+org.poltanov.forums.model
+org.poltanov.forums.repository
+org.poltanov.forums.service
+org.poltanov.forums.util
