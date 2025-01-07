@@ -3,7 +3,6 @@
 }
 
 html, body {
-    /* height: 100%; */
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -13,13 +12,12 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Контейнер для всей страницы */
 .page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: 100vh; /* Добавляем фиксированную высоту */
-    overflow: hidden; /* Предотвращаем прокрутку всей страницы */
+    height: 100vh;
+    overflow: hidden;
 }
 
 :root {
@@ -286,7 +284,7 @@ input[type="submit"]:hover,
     flex: 1;
     display: flex;
     flex-direction: row;
-    overflow: hidden; /* Предотвращаем прокрутку контейнера */
+    overflow: hidden;
 }
 
 .sidebar {
@@ -411,7 +409,7 @@ html.dark-theme .create-lobby-form input {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Растягиваем на всю высоту */
+    height: 100%;
     padding: 20px;
     box-sizing: border-box;
     background-color: var(--input-bg);
@@ -456,11 +454,10 @@ html.dark-theme .chat-container {
 }
 
 .chat-messages {
-    flex: 1; /* Возвращаем flex: 1 чтобы контейнер растягивался */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    /* height: 300px; Удаляем фиксированную высоту */
-    min-height: 0; /* Важно для корректной работы flex в Firefox */
+    min-height: 0;
     border: 1px solid var(--chat-message-border);
     border-radius: 5px;
     padding: 10px;
@@ -480,8 +477,8 @@ html.dark-theme .chat-messages {
 
 .chat-input {
     display: flex;
-    align-items: stretch; /* Изменено с align-items: center */
-    min-height: 40px; /* Добавлено минимальную высоту */
+    align-items: stretch;
+    min-height: 40px;
 }
 
 .chat-input input {
