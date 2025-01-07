@@ -13,69 +13,69 @@
 
 </head>
 <body>
-
-<header>
-    <h2 class="logo">Linkadoo</h2>
-    <div id="userInfo">
-        <strong>Залогинен как:</strong> <span id="userName"></span>
-    </div>
-    <div class="header-buttons">
-        <div class="theme-toggle-container">
-            <label class="theme-toggle-label">
-                <input type="checkbox" id="themeToggle" onchange="toggleTheme()" aria-label="Переключить тему">
-                <span class="theme-toggle-slider"></span>
-            </label>
-            <span id="themeIcon">☀️</span>
+<div class="page-container">
+    <header>
+        <h2 class="logo">Linkadoo</h2>
+        <div id="userInfo">
+            <strong>Залогинен как:</strong> <span id="userName"></span>
         </div>
-        <button class="btn btn-primary logout-button" onclick="logout()" aria-label="Выйти">
-            Выйти
-        </button>
-    </div>
-</header>
-
-<div class="container">
-    <aside class="sidebar">
-        <h3>Лобби</h3>
-        <div class="lobby-list">
-        </div>
-        <button class="btn btn-primary" id="createLobbyButton" onclick="showCreateLobbyForm()">Создать лобби</button>
-        <form class="create-lobby-form" id="createLobbyForm">
-            <input type="text" id="lobbyNameInput" placeholder="Название лобби" required/>
-            <div class="action-buttons">
-                <button type="submit" class="btn-primary" onclick="createLobby()">Создать</button>
-                <button type="button" class="btn-secondary" onclick="hideCreateLobbyForm()">Отмена</button>
+        <div class="header-buttons">
+            <div class="theme-toggle-container">
+                <label class="theme-toggle-label">
+                    <input type="checkbox" id="themeToggle" onchange="toggleTheme()" aria-label="Переключить тему">
+                    <span class="theme-toggle-slider"></span>
+                </label>
+                <span id="themeIcon">☀️</span>
             </div>
-        </form>
-    </aside>
-    <main class="main-content">
-        <section class="chat-container" style="display: none;">
-            <div class="chat-header">
-                <h3><span id="currentLobbyName"></span></h3>
-                <div class="chat-header-buttons">
-                    <button class="btn btn-primary leave-lobby-button" onclick="leaveLobby()" style="display: none;">
-                        Покинуть лобби
-                    </button>
-                    <button id="deleteLobbyButton" class="btn btn-danger" onclick="deleteLobby()" style="display: none;">
-                        Удалить лобби
-                    </button>
+            <button class="btn btn-primary logout-button" onclick="logout()" aria-label="Выйти">
+                Выйти
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Лобби</h3>
+            <div class="lobby-list">
+            </div>
+            <button class="btn btn-primary" id="createLobbyButton" onclick="showCreateLobbyForm()">Создать лобби</button>
+            <form class="create-lobby-form" id="createLobbyForm">
+                <input type="text" id="lobbyNameInput" placeholder="Название лобби" required/>
+                <div class="action-buttons">
+                    <button type="submit" class="btn-primary" onclick="createLobby()">Создать</button>
+                    <button type="button" class="btn-secondary" onclick="hideCreateLobbyForm()">Отмена</button>
                 </div>
-            </div>
-            <div id="messages" class="chat-messages">
-            </div>
-            <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Введите сообщение" onkeydown="handleKeyDown(event)"/>
-                <button onclick="sendMessage()">Отправить</button>
-            </div>
-        </section>
-    </main>
+            </form>
+        </aside>
+        <main class="main-content">
+            <section class="chat-container" style="display: none;">
+                <div class="chat-header">
+                    <h3><span id="currentLobbyName"></span></h3>
+                    <div class="chat-header-buttons">
+                        <button class="btn btn-primary leave-lobby-button" onclick="leaveLobby()" style="display: none;">
+                            Покинуть лобби
+                        </button>
+                        <button id="deleteLobbyButton" class="btn btn-danger" onclick="deleteLobby()" style="display: none;">
+                            Удалить лобби
+                        </button>
+                    </div>
+                </div>
+                <div id="messages" class="chat-messages">
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Введите сообщение" onkeydown="handleKeyDown(event)"/>
+                    <button onclick="sendMessage()">Отправить</button>
+                </div>
+            </section>
+        </main>
 
-    <aside class="participants-container">
-        <h4>Участники</h4>
-        <ul id="participantsList" class="participant-list">
-        </ul>
-    </aside>
+        <aside class="participants-container">
+            <h4>Участники</h4>
+            <ul id="participantsList" class="participant-list">
+            </ul>
+        </aside>
+    </div>
 </div>
-
 <script src="js/index.js"></script>
 
 </body>
